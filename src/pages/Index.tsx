@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -169,32 +168,32 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Header */}
-      <header className="bg-black/30 backdrop-blur-sm border-b border-emerald-500/30 sticky top-0 z-50">
+      <header className="bg-black/30 backdrop-blur-sm border-b border-purple-500/30 sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-xl flex items-center justify-center shadow-lg">
+              <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-xl flex items-center justify-center shadow-lg">
                 <Zap className="w-7 h-7 text-white" />
               </div>
               <div>
                 <span className="text-2xl font-bold text-white">AL-BURAQ</span>
-                <p className="text-sm text-emerald-300">Smart Home Automation</p>
+                <p className="text-sm text-purple-300">Smart Home Automation</p>
               </div>
             </div>
             <div className="flex space-x-3">
               <Button 
                 onClick={() => handleContact('whatsapp')}
                 variant="outline"
-                className="border-emerald-500/50 text-emerald-300 hover:bg-emerald-500/20"
+                className="border-purple-500/50 text-purple-300 hover:bg-purple-500/20"
               >
                 <MessageCircle className="w-4 h-4 mr-2" />
                 WhatsApp
               </Button>
               <Button 
                 onClick={handleDownloadAPK}
-                className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white shadow-lg"
+                className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white shadow-lg"
               >
                 <Download className="w-4 h-4 mr-2" />
                 Download App
@@ -206,50 +205,53 @@ const Index = () => {
 
       {/* Hero Section */}
       <section className="py-24 px-4 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-teal-600/20 blur-3xl"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 blur-3xl"></div>
         <div className="container mx-auto text-center relative z-10">
           <h1 className="text-6xl md:text-8xl font-bold text-white mb-8 leading-tight">
             AL-BURAQ
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 animate-pulse">
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 animate-pulse">
               Smart Home Revolution
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            🏠 <strong>Plug & Play Installation</strong> - No need to replace your old switchboard! <br/>
-            🎙️ <strong>Custom Voice Control</strong> - Say "Jhanzaib turn on the fan" <br/>
-            👥 <strong>Family Sharing</strong> - Control from anywhere in the world <br/>
-            📡 <strong>WiFi + Bluetooth</strong> - Works with or without internet
+            Transform your home into a smart paradise with our revolutionary plug & play technology. 
+            Control appliances with custom voice commands, share with family, and enjoy real-time updates 
+            from anywhere in the world - no rewiring needed!
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-12">
-            <Badge variant="secondary" className="bg-emerald-500/20 text-emerald-300 border-emerald-500/40 px-6 py-3 text-lg">
-              <Wrench className="w-5 h-5 mr-2" />
-              Plug & Play - No Rewiring
-            </Badge>
-            <Badge variant="secondary" className="bg-purple-500/20 text-purple-300 border-purple-500/40 px-6 py-3 text-lg">
-              <Mic className="w-5 h-5 mr-2" />
-              Custom Voice Commands
-            </Badge>
-            <Badge variant="secondary" className="bg-blue-500/20 text-blue-300 border-blue-500/40 px-6 py-3 text-lg">
-              <Users className="w-5 h-5 mr-2" />
-              Family Sharing
-            </Badge>
+            <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 backdrop-blur-sm border border-purple-500/40 rounded-full px-6 py-3 flex items-center space-x-3">
+              <Wrench className="w-5 h-5 text-purple-300" />
+              <span className="text-purple-200 font-medium">🔌 Plug & Play - No Rewiring</span>
+            </div>
+            <div className="bg-gradient-to-r from-pink-500/20 to-red-500/20 backdrop-blur-sm border border-pink-500/40 rounded-full px-6 py-3 flex items-center space-x-3">
+              <Mic className="w-5 h-5 text-pink-300" />
+              <span className="text-pink-200 font-medium">🎙️ Custom Voice Commands</span>
+            </div>
+            <div className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-sm border border-blue-500/40 rounded-full px-6 py-3 flex items-center space-x-3">
+              <Users className="w-5 h-5 text-blue-300" />
+              <span className="text-blue-200 font-medium">👥 Family Sharing</span>
+            </div>
+            <div className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-sm border border-cyan-500/40 rounded-full px-6 py-3 flex items-center space-x-3">
+              <Wifi className="w-5 h-5 text-cyan-300" />
+              <span className="text-cyan-200 font-medium">📡 WiFi + Bluetooth</span>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Plug & Play Feature Highlight */}
-      <section className="py-16 px-4 bg-gradient-to-r from-emerald-600/10 to-teal-600/10 border-y border-emerald-500/20">
+      <section className="py-16 px-4 bg-gradient-to-r from-purple-600/10 to-pink-600/10 border-y border-purple-500/20">
         <div className="container mx-auto text-center">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl font-bold text-white mb-6">🔌 Revolutionary Plug & Play Technology</h2>
             <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-black/40 p-6 rounded-xl border border-emerald-500/30">
-                <Wrench className="w-16 h-16 text-emerald-400 mx-auto mb-4" />
+              <div className="bg-black/40 p-6 rounded-xl border border-purple-500/30">
+                <Wrench className="w-16 h-16 text-purple-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-2">No Rewiring Needed</h3>
                 <p className="text-gray-300">Simply place inside your existing switchboard - no destruction or rewiring required</p>
               </div>
-              <div className="bg-black/40 p-6 rounded-xl border border-teal-500/30">
-                <Lightbulb className="w-16 h-16 text-teal-400 mx-auto mb-4" />
+              <div className="bg-black/40 p-6 rounded-xl border border-pink-500/30">
+                <Lightbulb className="w-16 h-16 text-pink-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-2">Old Switches Still Work</h3>
                 <p className="text-gray-300">Your physical switches remain functional - control appliances both physically and virtually</p>
               </div>
@@ -269,7 +271,7 @@ const Index = () => {
           <h2 className="text-5xl font-bold text-white text-center mb-16">🚀 Revolutionary Features</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <Card key={index} className="bg-black/50 border-emerald-500/30 hover:border-emerald-500/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/20">
+              <Card key={index} className="bg-black/50 border-purple-500/30 hover:border-purple-500/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20">
                 <CardHeader>
                   <div className={`w-20 h-20 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6 shadow-lg`}>
                     <feature.icon className="w-10 h-10 text-white" />
@@ -293,7 +295,7 @@ const Index = () => {
           <h2 className="text-5xl font-bold text-white text-center mb-16">💡 Our Smart Devices</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {products.map((product, index) => (
-              <Card key={product.id} className="bg-black/50 border-emerald-500/30 hover:border-emerald-500/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/20">
+              <Card key={product.id} className="bg-black/50 border-purple-500/30 hover:border-purple-500/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20">
                 <CardHeader>
                   <div className="relative">
                     <img 
@@ -307,7 +309,7 @@ const Index = () => {
                   </div>
                   <CardTitle className="text-white text-xl mb-2">{product.name}</CardTitle>
                   <div className="flex items-center space-x-3 mb-3">
-                    <span className="text-3xl font-bold text-emerald-400">{product.price}</span>
+                    <span className="text-3xl font-bold text-purple-400">{product.price}</span>
                     <span className="text-lg text-gray-500 line-through">{product.originalPrice}</span>
                   </div>
                 </CardHeader>
@@ -317,12 +319,12 @@ const Index = () => {
                   </CardDescription>
                   <div className="grid grid-cols-2 gap-2 mb-6">
                     {product.features.map((feature, idx) => (
-                      <Badge key={idx} variant="outline" className="text-xs border-emerald-500/40 text-emerald-300 py-1">
+                      <Badge key={idx} variant="outline" className="text-xs border-purple-500/40 text-purple-300 py-1">
                         {feature}
                       </Badge>
                     ))}
                   </div>
-                  <Button className="w-full bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white py-3 text-lg font-semibold">
+                  <Button className="w-full bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white py-3 text-lg font-semibold">
                     Order Now
                   </Button>
                 </CardContent>
@@ -366,10 +368,10 @@ const Index = () => {
           <h2 className="text-5xl font-bold text-white text-center mb-16">📹 Complete Installation Guides</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {installationVideos.map((video, index) => (
-              <Card key={index} className="bg-black/50 border-emerald-500/30 hover:border-emerald-500/60 transition-all hover:scale-105">
+              <Card key={index} className="bg-black/50 border-purple-500/30 hover:border-purple-500/60 transition-all hover:scale-105">
                 <CardHeader>
                   <CardTitle className="text-white flex items-center text-lg">
-                    <Play className="w-5 h-5 mr-2 text-emerald-400" />
+                    <Play className="w-5 h-5 mr-2 text-purple-400" />
                     {video.title}
                   </CardTitle>
                   <CardDescription className="text-gray-300">
@@ -394,21 +396,21 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-slate-800/50 to-emerald-800/50">
+      <section className="py-20 px-4 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <div className="container mx-auto">
           <h2 className="text-5xl font-bold text-white text-center mb-16">📞 Get In Touch</h2>
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-3 gap-8">
-              <Card className="bg-black/50 border-emerald-500/30 hover:border-emerald-500/60 transition-all hover:scale-105">
+              <Card className="bg-black/50 border-purple-500/30 hover:border-purple-500/60 transition-all hover:scale-105">
                 <CardHeader className="text-center">
-                  <Mail className="w-16 h-16 text-emerald-400 mx-auto mb-4" />
+                  <Mail className="w-16 h-16 text-purple-400 mx-auto mb-4" />
                   <CardTitle className="text-white text-xl">Email Us</CardTitle>
                 </CardHeader>
                 <CardContent className="text-center">
                   <p className="text-gray-300 mb-4">Get detailed information about our products</p>
                   <Button 
                     onClick={() => handleContact('email')}
-                    className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 w-full"
+                    className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 w-full"
                   >
                     info.alburaqsmarthome@gmail.com
                   </Button>
@@ -452,7 +454,7 @@ const Index = () => {
       </section>
 
       {/* Download Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-emerald-600/20 to-teal-600/20">
+      <section className="py-20 px-4 bg-gradient-to-r from-purple-600/20 to-pink-600/20">
         <div className="container mx-auto text-center">
           <h2 className="text-5xl font-bold text-white mb-8">📱 Download Our Revolutionary App</h2>
           <p className="text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
@@ -460,7 +462,7 @@ const Index = () => {
             Control your home from anywhere in the world or use Bluetooth for local control up to 100 meters.
           </p>
           <div className="flex flex-wrap justify-center gap-6 mb-12">
-            <div className="flex items-center space-x-3 text-emerald-300 bg-black/30 px-6 py-3 rounded-full">
+            <div className="flex items-center space-x-3 text-purple-300 bg-black/30 px-6 py-3 rounded-full">
               <Mic className="w-6 h-6" />
               <span className="text-lg">Custom Voice Commands</span>
             </div>
@@ -468,7 +470,7 @@ const Index = () => {
               <Users className="w-6 h-6" />
               <span className="text-lg">Family Sharing</span>
             </div>
-            <div className="flex items-center space-x-3 text-purple-300 bg-black/30 px-6 py-3 rounded-full">
+            <div className="flex items-center space-x-3 text-pink-300 bg-black/30 px-6 py-3 rounded-full">
               <Bluetooth className="w-6 h-6" />
               <span className="text-lg">Bluetooth + WiFi</span>
             </div>
@@ -476,7 +478,7 @@ const Index = () => {
           <Button 
             onClick={handleDownloadAPK}
             size="lg"
-            className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-12 py-6 text-xl font-bold shadow-2xl hover:shadow-emerald-500/50 transition-all"
+            className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-12 py-6 text-xl font-bold shadow-2xl hover:shadow-purple-500/50 transition-all"
           >
             <Download className="w-8 h-8 mr-4" />
             Download APK Now - FREE
@@ -488,10 +490,10 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-black/60 py-16 px-4 border-t border-emerald-500/20">
+      <footer className="bg-black/60 py-16 px-4 border-t border-purple-500/20">
         <div className="container mx-auto text-center">
           <div className="flex items-center justify-center space-x-3 mb-6">
-            <div className="w-12 h-12 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-xl flex items-center justify-center shadow-lg">
+            <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-xl flex items-center justify-center shadow-lg">
               <Zap className="w-7 h-7 text-white" />
             </div>
             <div>
@@ -502,7 +504,7 @@ const Index = () => {
             🔌 Plug & Play Installation • 🎙️ Custom Voice Control • 👥 Family Sharing • 📡 WiFi & Bluetooth • ⚡ Up to 25A Support
           </p>
           <div className="flex justify-center space-x-6 mb-6">
-            <a href="mailto:info.alburaqsmarthome@gmail.com" className="text-emerald-400 hover:text-emerald-300 transition-colors">
+            <a href="mailto:info.alburaqsmarthome@gmail.com" className="text-purple-400 hover:text-purple-300 transition-colors">
               <Mail className="w-6 h-6" />
             </a>
             <a href="https://wa.me/923054248536" target="_blank" className="text-green-400 hover:text-green-300 transition-colors">
