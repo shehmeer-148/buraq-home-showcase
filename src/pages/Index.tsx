@@ -1,10 +1,9 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Wifi, Smartphone, Shield, Zap, Globe, Download, Play, Users, Mic, Sync, Bluetooth, Sliders, Clock, Mail, Phone, MessageCircle, Wrench, Lightbulb, Fan, X } from "lucide-react";
+import { Wifi, Smartphone, Shield, Zap, Globe, Download, Play, Users, Mic, RefreshCw, Bluetooth, Sliders, Clock, Mail, Phone, MessageCircle, Wrench, Lightbulb, Fan, X } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 
 const Index = () => {
@@ -90,7 +89,7 @@ const Index = () => {
       color: "from-green-500 to-emerald-600"
     },
     {
-      icon: Sync,
+      icon: RefreshCw,
       title: "Real-time Updates",
       description: "See which appliances are running in real-time. App syncs instantly with device and all family members simultaneously.",
       color: "from-purple-500 to-pink-600"
@@ -377,7 +376,7 @@ const Index = () => {
               <p className="text-gray-300 text-base md:text-lg">Use any name - your child's name, pet's name, or any word you prefer</p>
             </div>
             <div className="bg-gray-800/50 p-6 md:p-8 rounded-xl border border-cyan-500/30 hover:border-cyan-500/60 transition-all hover:scale-105 animate-scale-in">
-              <Sync className="w-12 h-12 md:w-16 md:h-16 text-cyan-400 mx-auto mb-4 md:mb-6" />
+              <RefreshCw className="w-12 h-12 md:w-16 md:h-16 text-cyan-400 mx-auto mb-4 md:mb-6" />
               <h3 className="text-xl md:text-2xl font-semibold text-white mb-4">Instant Response</h3>
               <p className="text-gray-300 text-base md:text-lg">Commands execute immediately without internet delays</p>
             </div>
