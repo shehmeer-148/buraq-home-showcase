@@ -249,7 +249,7 @@ ${product.features.map((f) => `- ${f}`).join("\n")}
             <div className="flex items-center space-x-3">
              <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-emerald-500 rounded-xl flex items-center justify-center shadow-lg">
   <img
-    src="/lovable-uploads/logo_white1-removebg-preview.png"
+    src="/lovable-uploads/66f5d438-3ca2-41c8-9933-5ceff1c56961.png"
     alt="AL-BURAQ Logo"
     className="w-full h-full object-contain"
   />
@@ -668,7 +668,7 @@ ${product.features.map((f) => `- ${f}`).join("\n")}
       <div className="flex items-center justify-center space-x-3 mb-6">
         <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-emerald-500 rounded-xl flex items-center justify-center shadow-lg">
   <img
-    src="/lovable-uploads/logo_white1-removebg-preview.png"
+    src="/lovable-uploads/66f5d438-3ca2-41c8-9933-5ceff1c56961.png"
     alt="AL-BURAQ Logo"
     className="w-full h-full object-contain"
   />
