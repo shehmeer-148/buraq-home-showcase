@@ -1,9 +1,8 @@
-
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Wifi, Smartphone, Shield, Zap, Globe, Download, Play, Users, Mic, Volume2, Bluetooth, Sliders, Clock, Mail, Phone, MessageCircle, Wrench, Lightbulb, Fan } from "lucide-react";
+import { Wifi, Smartphone, Shield, Zap, Globe, Download, Play, Plug, Users, User, Mic, Volume2, Bluetooth, Sliders, Clock, Mail, Phone, MessageCircle, Wrench, Lightbulb, Fan } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 
 const Index = () => {
@@ -39,7 +38,6 @@ useEffect(() => {
 
   return () => clearInterval(interval);
 }, [charIndex, currentCommandIndex, voiceCommands]);
-
 
   const products = [
     {
@@ -118,15 +116,15 @@ useEffect(() => {
       color: "from-green-500 to-emerald-600"
     },
     {
-      icon: Volume2,
+      icon: Globe,
       title: "Real-time Updates",
       description: "See which appliances are running in real-time. App syncs instantly with device and all family members simultaneously.",
       color: "from-purple-500 to-pink-600"
     },
     {
-      icon: Bluetooth,
-      title: "Bluetooth + WiFi Dual Mode",
-      description: "Works with both WiFi and Bluetooth. Bluetooth range up to 100 meters - no internet needed for local control.",
+      icon: Wifi,
+      title: "WiFi Mode",
+      description: "Works with WiFi connectivity for seamless control from anywhere in the world. Reliable internet-based control for your smart home.",
       color: "from-orange-500 to-red-600"
     },
     {
@@ -146,31 +144,45 @@ useEffect(() => {
   const installationVideos = [
     {
       title: "Device Installation Guide",
-      description: "Step-by-step installation of AL-BURAQ smart switches in your existing switchboard",
+      description: "Learn how to safely install the AL-BURAQ Smart Switches into your existing switchboard setup.",
       icon: Wrench,
       color: "from-green-500 to-emerald-600",
-      url: "https://www.youtube.com/embed/6mkYZy_gRgU"
+      url: "https://www.youtube.com/embed/eczKYZi85lY"
     },
     {
       title: "App Setup & Configuration",
-      description: "Complete guide to setup the mobile app and connect to your devices",
+      description: "Step-by-step guide to set up the AL-BURAQ mobile app and connect your smart devices easily.",
       icon: Smartphone,
       color: "from-blue-500 to-cyan-600",
-      url: "https://www.youtube.com/embed/6mkYZy_gRgU"
+      url: "https://www.youtube.com/embed/O-34NOzetv4"
     },
     {
       title: "Voice Commands Setup",
-      description: "Learn how to create custom voice commands with any name you prefer",
+      description: "Learn how to add custom voice commands and personalize your smart home interactions.",
       icon: Mic,
       color: "from-purple-500 to-pink-600",
-      url: "https://www.youtube.com/embed/6mkYZy_gRgU"
+      url: "https://www.youtube.com/embed/JIY2DYImALM"
     },
     {
-      title: "Family Sharing Tutorial",
-      description: "How to share device control with family members and sync real-time updates",
-      icon: Users,
+      title: "WiFi Settings",
+      description: "This video explains how to update or change your AL-BURAQ device WiFi using the app.",
+      icon: Wifi,
+      color: "from-cyan-500 to-blue-600",
+      url: "https://www.youtube.com/embed/W9whvtlJDiE"
+    },
+    {
+      title: "Profile Setting Tutorial",
+      description: "A quick tutorial on how to update your profile name and profile picture in the app.",
+      icon: User,
       color: "from-orange-500 to-red-600",
-      url: "https://www.youtube.com/embed/6mkYZy_gRgU"
+      url: "https://www.youtube.com/embed/h1ibjLFNjvs"
+    },
+    {
+      title: "Wiring Schematics Tutorial",
+      description: "Detailed wiring diagram to help you connect your AL-BURAQ device to your switchboard properly.",
+      icon: Plug,
+      color: "from-lime-500 to-green-600",
+      url: "https://www.youtube.com/embed/dpl4CPUovT0"
     }
   ];
 
@@ -245,36 +257,38 @@ ${product.features.map((f) => `- ${f}`).join("\n")}
       {/* Header */}
       <header className="bg-black/30 backdrop-blur-sm border-b border-green-500/30 sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-3">
-             <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-emerald-500 rounded-xl flex items-center justify-center shadow-lg">
-  <img
-    src="/lovable-uploads/66f5d438-3ca2-41c8-9933-5ceff1c56961.png"
-    alt="AL-BURAQ Logo"
-    className="w-full h-full object-contain"
-  />
-</div>
-
-              <div>
-                <span className="text-2xl font-bold text-white">AL-BURAQ</span>
-                <p className="text-sm text-green-300">Smart Home Automation</p>
+          <div className="flex items-center justify-between flex-wrap gap-4">
+            {/* Logo + Text */}
+            <div className="flex items-center space-x-2">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-green-400 to-emerald-500 rounded-xl flex items-center justify-center shadow-lg">
+                <img
+                  src="/lovable-uploads/66f5d438-3ca2-41c8-9933-5ceff1c56961.png"
+                  alt="AL-BURAQ Logo"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <div className="leading-tight">
+                <span className="text-lg sm:text-2xl font-bold text-white">AL-BURAQ</span>
+                <p className="text-xs sm:text-sm text-green-300">Smart Home Automation</p>
               </div>
             </div>
-            <div className="flex space-x-3">
-              <Button 
+
+            {/* Buttons */}
+            <div className="flex items-center space-x-2">
+              <Button
                 onClick={() => handleContact('whatsapp')}
                 variant="outline"
-                className="border-green-500/50 text-green-300 hover:bg-green-500/20"
+                className="border-green-500/50 text-green-300 hover:bg-green-500/20 px-2 sm:px-4"
               >
-                <MessageCircle className="w-4 h-4 mr-2" />
-                WhatsApp
+                <MessageCircle className="w-4 h-4" />
+                <span className="hidden sm:inline ml-2">WhatsApp</span>
               </Button>
-              <Button 
+              <Button
                 onClick={handleDownloadAPK}
-                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white shadow-lg"
+                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white shadow-lg px-2 sm:px-4"
               >
-                <Download className="w-4 h-4 mr-2" />
-                Download App
+                <Download className="w-4 h-4" />
+                <span className="hidden sm:inline ml-2">Download App</span>
               </Button>
             </div>
           </div>
@@ -647,14 +661,16 @@ ${product.features.map((f) => `- ${f}`).join("\n")}
           <span className="text-lg">Bluetooth + WiFi</span>
         </div>
       </div>
-      <Button
-        onClick={handleDownloadAPK}
-        size="lg"
-        className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white px-12 py-6 text-xl font-bold shadow-2xl hover:shadow-green-500/50 transition-all"
-      >
-        <Download className="w-8 h-8 mr-4" />
-        Download APK Now - FREE
-      </Button>
+      <div className="flex justify-center mb-6">
+        <Button
+          onClick={handleDownloadAPK}
+          size="lg"
+          className="w-full sm:w-auto min-h-[80px] flex flex-col sm:flex-row items-center justify-center bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white px-6 sm:px-12 py-4 sm:py-6 text-lg sm:text-xl font-bold shadow-2xl hover:shadow-green-500/50 transition-all transform hover:scale-105 active:scale-95"
+        >
+          <Download className="w-6 h-6 sm:w-8 sm:h-8 mb-2 sm:mb-0 sm:mr-4" />
+          <span>Download APK Now - FREE</span>
+        </Button>
+      </div>
       <p className="text-lg text-gray-400 mt-6">
         ✅ Free download • ✅ Latest version • ✅ Android compatible • ✅
         Voice control enabled
