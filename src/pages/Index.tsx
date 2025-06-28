@@ -107,37 +107,37 @@ useEffect(() => {
       icon: Users,
       title: "Family Sharing",
       description: "Share app access with family members so everyone can control appliances. Real-time sync keeps everyone updated instantly.",
-      color: "from-blue-500 to-cyan-600"
+      color: "from-slate-500 to-gray-600"
     },
     {
       icon: Mic,
       title: "Custom Voice Commands",
       description: "Create personalized voice commands like 'Jhanzaib turn on the fan'. No need to say 'Alexa' or 'Siri' - use any name you want!",
-      color: "from-green-500 to-emerald-600"
+      color: "from-slate-600 to-slate-700"
     },
     {
       icon: Globe,
       title: "Real-time Updates",
       description: "See which appliances are running in real-time. App syncs instantly with device and all family members simultaneously.",
-      color: "from-purple-500 to-pink-600"
+      color: "from-gray-500 to-slate-600"
     },
     {
       icon: Wifi,
       title: "WiFi Mode",
       description: "Works with WiFi connectivity for seamless control from anywhere in the world. Reliable internet-based control for your smart home.",
-      color: "from-orange-500 to-red-600"
+      color: "from-slate-700 to-gray-800"
     },
     {
       icon: Fan,
       title: "Dimmer & Speed Control",
       description: "Control fan speed from 0-100% with our advanced dimmer units. Perfect speed control for ultimate comfort.",
-      color: "from-indigo-500 to-purple-600"
+      color: "from-gray-600 to-slate-700"
     },
     {
       icon: Wrench,
       title: "Plug & Play Installation",
       description: "No need to replace your old switchboard! Just place inside your existing board - your old switches still work physically.",
-      color: "from-teal-500 to-cyan-600"
+      color: "from-slate-500 to-gray-600"
     }
   ];
 
@@ -146,42 +146,42 @@ useEffect(() => {
       title: "Device Installation Guide",
       description: "Learn how to safely install the AL-BURAQ Smart Switches into your existing switchboard setup.",
       icon: Wrench,
-      color: "from-green-500 to-emerald-600",
+      color: "from-slate-500 to-gray-600",
       url: "https://www.youtube.com/embed/eczKYZi85lY"
     },
     {
       title: "App Setup & Configuration",
       description: "Step-by-step guide to set up the AL-BURAQ mobile app and connect your smart devices easily.",
       icon: Smartphone,
-      color: "from-blue-500 to-cyan-600",
+      color: "from-slate-600 to-gray-700",
       url: "https://www.youtube.com/embed/O-34NOzetv4"
     },
     {
       title: "Voice Commands Setup",
       description: "Learn how to add custom voice commands and personalize your smart home interactions.",
       icon: Mic,
-      color: "from-purple-500 to-pink-600",
+      color: "from-gray-600 to-slate-700",
       url: "https://www.youtube.com/embed/JIY2DYImALM"
     },
     {
       title: "WiFi Settings",
       description: "This video explains how to update or change your AL-BURAQ device WiFi using the app.",
       icon: Wifi,
-      color: "from-cyan-500 to-blue-600",
+      color: "from-slate-700 to-gray-800",
       url: "https://www.youtube.com/embed/W9whvtlJDiE"
     },
     {
       title: "Profile Setting Tutorial",
       description: "A quick tutorial on how to update your profile name and profile picture in the app.",
       icon: User,
-      color: "from-orange-500 to-red-600",
+      color: "from-gray-500 to-slate-600",
       url: "https://www.youtube.com/embed/h1ibjLFNjvs"
     },
     {
       title: "Wiring Schematics Tutorial",
       description: "Detailed wiring diagram to help you connect your AL-BURAQ device to your switchboard properly.",
       icon: Plug,
-      color: "from-lime-500 to-green-600",
+      color: "from-slate-600 to-gray-700",
       url: "https://www.youtube.com/embed/dpl4CPUovT0"
     }
   ];
@@ -253,14 +253,14 @@ ${product.features.map((f) => `- ${f}`).join("\n")}
 
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-slate-900">
       {/* Header */}
-      <header className="bg-black/30 backdrop-blur-sm border-b border-green-500/30 sticky top-0 z-50">
+      <header className="bg-black/30 backdrop-blur-sm border-b border-slate-500/30 sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between flex-wrap gap-4">
             {/* Logo + Text */}
             <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-green-400 to-emerald-500 rounded-xl flex items-center justify-center shadow-lg">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-slate-400 to-gray-500 rounded-xl flex items-center justify-center shadow-lg">
                 <img
                   src="/lovable-uploads/66f5d438-3ca2-41c8-9933-5ceff1c56961.png"
                   alt="AL-BURAQ Logo"
@@ -269,7 +269,7 @@ ${product.features.map((f) => `- ${f}`).join("\n")}
               </div>
               <div className="leading-tight">
                 <span className="text-lg sm:text-2xl font-bold text-white">AL-BURAQ</span>
-                <p className="text-xs sm:text-sm text-green-300">Smart Home Automation</p>
+                <p className="text-xs sm:text-sm text-slate-300">Smart Home Automation</p>
               </div>
             </div>
 
@@ -278,14 +278,14 @@ ${product.features.map((f) => `- ${f}`).join("\n")}
               <Button
                 onClick={() => handleContact('whatsapp')}
                 variant="outline"
-                className="border-green-500/50 text-green-300 hover:bg-green-500/20 px-2 sm:px-4"
+                className="border-slate-500/50 text-slate-300 hover:bg-slate-500/20 px-2 sm:px-4"
               >
                 <MessageCircle className="w-4 h-4" />
                 <span className="hidden sm:inline ml-2">WhatsApp</span>
               </Button>
               <Button
                 onClick={handleDownloadAPK}
-                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white shadow-lg px-2 sm:px-4"
+                className="bg-gradient-to-r from-slate-500 to-gray-600 hover:from-slate-600 hover:to-gray-700 text-white shadow-lg px-2 sm:px-4"
               >
                 <Download className="w-4 h-4" />
                 <span className="hidden sm:inline ml-2">Download App</span>
@@ -297,65 +297,65 @@ ${product.features.map((f) => `- ${f}`).join("\n")}
 
       {/* Hero Section */}
       <section className="py-24 px-4 relative overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-emerald-600/20 blur-3xl"></div>
+    <div className="absolute inset-0 bg-gradient-to-r from-slate-600/20 to-gray-600/20 blur-3xl"></div>
     <div className="container mx-auto text-center relative z-10">
       <h1 className="text-6xl md:text-8xl font-bold text-white mb-8 leading-tight">
         AL-BURAQ
-        <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-emerald-400 to-lime-400 animate-pulse">
+        <span className="block text-transparent bg-clip-text bg-gradient-to-r from-slate-400 via-gray-400 to-slate-300 animate-pulse">
           Smart Home Automation
         </span>
       </h1>
      <p
   className="text-xl md:text-2xl text-gray-200 mb-10 max-w-3xl mx-auto leading-relaxed text-center animate-fade-in-up"
 >
-  ✨ Experience the future of living with our <span className="text-green-400 font-semibold">Plug & Play</span> Smart System —
+  ✨ Experience the future of living with our <span className="text-slate-400 font-semibold">Plug & Play</span> Smart System —
   <br className="hidden md:block" />
   No rewiring, No hassle.
   <br /><br />
-  🗣️ Control appliances using <span className="text-green-300 font-semibold">Custom Voice Commands</span>,
+  🗣️ Control appliances using <span className="text-slate-300 font-semibold">Custom Voice Commands</span>,
    <br className="hidden md:block" />
-  Share access with your family, and enjoy <span className="text-green-300 font-semibold">Real-Time Control</span> from anywhere in the world.
+  Share access with your family, and enjoy <span className="text-slate-300 font-semibold">Real-Time Control</span> from anywhere in the world.
 </p>
 
       <div className="flex flex-wrap justify-center gap-4 mb-12">
-        <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 backdrop-blur-sm border border-green-500/40 rounded-full px-6 py-3 flex items-center space-x-3">
-          <Wrench className="w-5 h-5 text-green-300" />
-          <span className="text-green-200 font-medium">🔌 Plug & Play - No Rewiring</span>
+        <div className="bg-gradient-to-r from-slate-500/20 to-gray-500/20 backdrop-blur-sm border border-slate-500/40 rounded-full px-6 py-3 flex items-center space-x-3">
+          <Wrench className="w-5 h-5 text-slate-300" />
+          <span className="text-slate-200 font-medium">🔌 Plug & Play - No Rewiring</span>
         </div>
-        <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 backdrop-blur-sm border border-green-500/40 rounded-full px-6 py-3 flex items-center space-x-3">
-          <Mic className="w-5 h-5 text-green-300" />
-          <span className="text-green-200 font-medium">🎙️ Custom Voice Commands</span>
+        <div className="bg-gradient-to-r from-slate-500/20 to-gray-500/20 backdrop-blur-sm border border-slate-500/40 rounded-full px-6 py-3 flex items-center space-x-3">
+          <Mic className="w-5 h-5 text-slate-300" />
+          <span className="text-slate-200 font-medium">🎙️ Custom Voice Commands</span>
         </div>
-        <div className="bg-gradient-to-r from-emerald-500/20 to-lime-500/20 backdrop-blur-sm border border-emerald-500/40 rounded-full px-6 py-3 flex items-center space-x-3">
-          <Users className="w-5 h-5 text-emerald-300" />
-          <span className="text-emerald-200 font-medium">👥 Family Sharing</span>
+        <div className="bg-gradient-to-r from-gray-500/20 to-slate-500/20 backdrop-blur-sm border border-gray-500/40 rounded-full px-6 py-3 flex items-center space-x-3">
+          <Users className="w-5 h-5 text-gray-300" />
+          <span className="text-gray-200 font-medium">👥 Family Sharing</span>
         </div>
-        <div className="bg-gradient-to-r from-lime-500/20 to-green-500/20 backdrop-blur-sm border border-lime-500/40 rounded-full px-6 py-3 flex items-center space-x-3">
-          <Wifi className="w-5 h-5 text-lime-300" />
-          <span className="text-lime-200 font-medium">📡 WiFi + Bluetooth</span>
+        <div className="bg-gradient-to-r from-slate-500/20 to-gray-500/20 backdrop-blur-sm border border-slate-500/40 rounded-full px-6 py-3 flex items-center space-x-3">
+          <Wifi className="w-5 h-5 text-slate-300" />
+          <span className="text-slate-200 font-medium">📡 WiFi Control</span>
         </div>
       </div>
     </div>
   </section>
 
       {/* Plug & Play Feature Highlight */}
-  <section className="py-16 px-4 bg-gradient-to-r from-green-600/10 to-emerald-600/10 border-y border-green-500/20">
+  <section className="py-16 px-4 bg-gradient-to-r from-slate-600/10 to-gray-600/10 border-y border-slate-500/20">
     <div className="container mx-auto text-center">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-4xl font-bold text-white mb-6">🔌 Revolutionary Plug & Play Technology</h2>
         <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-black/40 p-6 rounded-xl border border-green-500/30">
-            <Wrench className="w-16 h-16 text-green-400 mx-auto mb-4" />
+          <div className="bg-black/40 p-6 rounded-xl border border-slate-500/30">
+            <Wrench className="w-16 h-16 text-slate-400 mx-auto mb-4" />
             <h3 className="text-xl font-bold text-white mb-2">No Rewiring Needed</h3>
             <p className="text-gray-300">Simply place inside your existing switchboard - no destruction or rewiring required</p>
           </div>
-          <div className="bg-black/40 p-6 rounded-xl border border-emerald-500/30">
-            <Lightbulb className="w-16 h-16 text-emerald-400 mx-auto mb-4" />
+          <div className="bg-black/40 p-6 rounded-xl border border-gray-500/30">
+            <Lightbulb className="w-16 h-16 text-gray-400 mx-auto mb-4" />
             <h3 className="text-xl font-bold text-white mb-2">Old Switches Still Work</h3>
             <p className="text-gray-300">Your physical switches remain functional - control appliances both physically and virtually</p>
           </div>
-          <div className="bg-black/40 p-6 rounded-xl border border-lime-500/30">
-            <Zap className="w-16 h-16 text-lime-400 mx-auto mb-4" />
+          <div className="bg-black/40 p-6 rounded-xl border border-slate-500/30">
+            <Zap className="w-16 h-16 text-slate-400 mx-auto mb-4" />
             <h3 className="text-xl font-bold text-white mb-2">Instant Smart Home</h3>
             <p className="text-gray-300">Transform your entire home into a smart home in minutes, not hours</p>
           </div>
@@ -370,7 +370,7 @@ ${product.features.map((f) => `- ${f}`).join("\n")}
       <h2 className="text-5xl font-bold text-white text-center mb-16">🚀 Revolutionary Features</h2>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {features.map((feature, index) => (
-          <Card key={index} className="bg-black/50 border-green-500/30 hover:border-green-500/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20">
+          <Card key={index} className="bg-black/50 border-slate-500/30 hover:border-slate-500/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-slate-500/20">
             <CardHeader>
               <div className={`w-20 h-20 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6 shadow-lg`}>
                 <feature.icon className="w-10 h-10 text-white" />
@@ -398,7 +398,7 @@ ${product.features.map((f) => `- ${f}`).join("\n")}
         {products.map((product, index) => (
           <Card
             key={product.id}
-            className="bg-black/50 border-green-500/30 hover:border-green-500/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20"
+            className="bg-black/50 border-slate-500/30 hover:border-slate-500/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-slate-500/20"
           >
             <CardHeader>
               <div className="relative">
@@ -415,7 +415,7 @@ ${product.features.map((f) => `- ${f}`).join("\n")}
                 {product.name}
               </CardTitle>
               <div className="flex items-center space-x-3 mb-3">
-                <span className="text-3xl font-bold text-green-400">
+                <span className="text-3xl font-bold text-slate-400">
                   {product.price}
                 </span>
                 <span className="text-lg text-gray-500 line-through">
@@ -432,7 +432,7 @@ ${product.features.map((f) => `- ${f}`).join("\n")}
                   <Badge
                     key={idx}
                     variant="outline"
-                    className="text-xs border-green-500/40 text-green-300 py-1"
+                    className="text-xs border-slate-500/40 text-slate-300 py-1"
                   >
                     {feature}
                   </Badge>
@@ -440,7 +440,7 @@ ${product.features.map((f) => `- ${f}`).join("\n")}
               </div>
               <Button
   onClick={() => handleOrder(product)}
-  className="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white py-3 text-lg font-semibold"
+  className="w-full bg-gradient-to-r from-slate-500 to-gray-600 hover:from-slate-600 hover:to-gray-700 text-white py-3 text-lg font-semibold"
 >
   Order Now
 </Button>
@@ -452,7 +452,7 @@ ${product.features.map((f) => `- ${f}`).join("\n")}
     </div>
   </section>
       {/* Voice Command Showcase */}
-       <section className="py-20 px-4 bg-gradient-to-r from-green-600/20 to-emerald-600/20">
+       <section className="py-20 px-4 bg-gradient-to-r from-slate-600/20 to-gray-600/20">
     <div className="container mx-auto text-center">
       <h2 className="text-5xl font-bold text-white mb-8">
         🎙️ Revolutionary Voice Control
@@ -461,9 +461,9 @@ ${product.features.map((f) => `- ${f}`).join("\n")}
      <p className="text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed text-center">
   Unlike Traditional Voice Assistants, Create Your Own Commands With Any Name You Want.
   <br />
-  <strong className="text-green-300 text-3xl block mt-4">
+  <strong className="text-slate-300 text-3xl block mt-4">
     {displayedText}
-    <span className="animate-pulse text-green-400 ml-1">|</span>
+    <span className="animate-pulse text-slate-400 ml-1">|</span>
   </strong>
   <br />
   <span className="text-white text-xl block mt-2">— The choice is yours! —</span>
@@ -471,8 +471,8 @@ ${product.features.map((f) => `- ${f}`).join("\n")}
 
 
       <div className="grid md:grid-cols-3 gap-8">
-        <div className="bg-black/50 p-8 rounded-xl border border-green-500/30 hover:border-green-500/60 transition-all">
-          <Mic className="w-16 h-16 text-green-400 mx-auto mb-6" />
+        <div className="bg-black/50 p-8 rounded-xl border border-slate-500/30 hover:border-slate-500/60 transition-all">
+          <Mic className="w-16 h-16 text-slate-400 mx-auto mb-6" />
           <h3 className="text-2xl font-semibold text-white mb-4">
             Custom Names
           </h3>
@@ -481,8 +481,8 @@ ${product.features.map((f) => `- ${f}`).join("\n")}
             prefer
           </p>
         </div>
-        <div className="bg-black/50 p-8 rounded-xl border border-emerald-500/30 hover:border-emerald-500/60 transition-all">
-          <Volume2 className="w-16 h-16 text-emerald-400 mx-auto mb-6" />
+        <div className="bg-black/50 p-8 rounded-xl border border-gray-500/30 hover:border-gray-500/60 transition-all">
+          <Volume2 className="w-16 h-16 text-gray-400 mx-auto mb-6" />
           <h3 className="text-2xl font-semibold text-white mb-4">
             Instant Response
           </h3>
@@ -490,8 +490,8 @@ ${product.features.map((f) => `- ${f}`).join("\n")}
             Commands execute immediately without internet delays
           </p>
         </div>
-        <div className="bg-black/50 p-8 rounded-xl border border-lime-500/30 hover:border-lime-500/60 transition-all">
-          <Users className="w-16 h-16 text-lime-400 mx-auto mb-6" />
+        <div className="bg-black/50 p-8 rounded-xl border border-slate-500/30 hover:border-slate-500/60 transition-all">
+          <Users className="w-16 h-16 text-slate-400 mx-auto mb-6" />
           <h3 className="text-2xl font-semibold text-white mb-4">
             Family Commands
           </h3>
@@ -513,11 +513,11 @@ ${product.features.map((f) => `- ${f}`).join("\n")}
         {installationVideos.map((video, index) => (
           <Card
             key={index}
-            className="bg-black/50 border-green-500/30 hover:border-green-500/60 transition-all hover:scale-105"
+            className="bg-black/50 border-slate-500/30 hover:border-slate-500/60 transition-all hover:scale-105"
           >
             <CardHeader>
               <CardTitle className="text-white flex items-center text-lg">
-                <Play className="w-5 h-5 mr-2 text-green-400" />
+                <Play className="w-5 h-5 mr-2 text-slate-400" />
                 {video.title}
               </CardTitle>
               <CardDescription className="text-gray-300">
@@ -565,7 +565,7 @@ ${product.features.map((f) => `- ${f}`).join("\n")}
     )}
 
       {/* Contact Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-slate-800/50 to-green-800/50">
+      <section className="py-20 px-4 bg-gradient-to-r from-slate-800/50 to-gray-800/50">
    <div className="container mx-auto px-4">
   <h2 className="text-5xl font-bold text-white text-center mb-16">
     📞 Get In Touch
@@ -573,9 +573,9 @@ ${product.features.map((f) => `- ${f}`).join("\n")}
   <div className="max-w-4xl mx-auto">
     <div className="grid md:grid-cols-3 gap-8">
       {/* Email Card */}
-      <Card className="bg-black/50 border-green-500/30 hover:border-green-500/60 transition-all hover:scale-105">
+      <Card className="bg-black/50 border-slate-500/30 hover:border-slate-500/60 transition-all hover:scale-105">
         <CardHeader className="text-center">
-          <Mail className="w-16 h-16 text-green-400 mx-auto mb-4" />
+          <Mail className="w-16 h-16 text-slate-400 mx-auto mb-4" />
           <CardTitle className="text-white text-xl">Email Us</CardTitle>
         </CardHeader>
         <CardContent className="text-center">
@@ -584,7 +584,7 @@ ${product.features.map((f) => `- ${f}`).join("\n")}
           </p>
         <Button
   onClick={() => handleContact("email")}
-  className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 w-full px-3 py-3 text-sm overflow-hidden whitespace-normal break-words text-center"
+  className="bg-gradient-to-r from-slate-500 to-gray-600 hover:from-slate-600 hover:to-gray-700 w-full px-3 py-3 text-sm overflow-hidden whitespace-normal break-words text-center"
 >
   <span className="block w-full break-words text-sm">
     info.alburaqsmarthome@gmail.com
@@ -594,9 +594,9 @@ ${product.features.map((f) => `- ${f}`).join("\n")}
       </Card>
 
       {/* WhatsApp Card */}
-      <Card className="bg-black/50 border-lime-500/30 hover:border-lime-500/60 transition-all hover:scale-105">
+      <Card className="bg-black/50 border-slate-500/30 hover:border-slate-500/60 transition-all hover:scale-105">
         <CardHeader className="text-center">
-          <MessageCircle className="w-16 h-16 text-lime-400 mx-auto mb-4" />
+          <MessageCircle className="w-16 h-16 text-slate-400 mx-auto mb-4" />
           <CardTitle className="text-white text-xl">WhatsApp</CardTitle>
         </CardHeader>
         <CardContent className="text-center">
@@ -605,7 +605,7 @@ ${product.features.map((f) => `- ${f}`).join("\n")}
           </p>
           <Button
             onClick={() => handleContact("whatsapp")}
-            className="bg-gradient-to-r from-lime-500 to-green-600 hover:from-lime-600 hover:to-green-700 w-full"
+            className="bg-gradient-to-r from-slate-500 to-gray-600 hover:from-slate-600 hover:to-gray-700 w-full"
           >
             +92 305 4248536
           </Button>
@@ -613,9 +613,9 @@ ${product.features.map((f) => `- ${f}`).join("\n")}
       </Card>
 
       {/* Call Card */}
-      <Card className="bg-black/50 border-emerald-500/30 hover:border-emerald-500/60 transition-all hover:scale-105">
+      <Card className="bg-black/50 border-slate-500/30 hover:border-slate-500/60 transition-all hover:scale-105">
         <CardHeader className="text-center">
-          <Phone className="w-16 h-16 text-emerald-400 mx-auto mb-4" />
+          <Phone className="w-16 h-16 text-slate-400 mx-auto mb-4" />
           <CardTitle className="text-white text-xl">Call Us</CardTitle>
         </CardHeader>
         <CardContent className="text-center">
@@ -624,7 +624,7 @@ ${product.features.map((f) => `- ${f}`).join("\n")}
           </p>
           <Button
             onClick={() => handleContact("call")}
-            className="bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 w-full"
+            className="bg-gradient-to-r from-slate-500 to-gray-600 hover:from-slate-600 hover:to-gray-700 w-full"
           >
             +92 305 4248536
           </Button>
@@ -637,7 +637,7 @@ ${product.features.map((f) => `- ${f}`).join("\n")}
   </section>
 
       {/* Download Section */}
-  <section className="py-20 px-4 bg-gradient-to-r from-green-600/20 to-emerald-600/20">
+  <section className="py-20 px-4 bg-gradient-to-r from-slate-600/20 to-gray-600/20">
     <div className="container mx-auto text-center">
       <h2 className="text-5xl font-bold text-white mb-8">
         📱 Download Our Revolutionary App
@@ -645,27 +645,27 @@ ${product.features.map((f) => `- ${f}`).join("\n")}
       <p className="text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
         Get the AL-BURAQ Smart Home app with custom voice control, family
         sharing, and real-time updates. Control your home from anywhere in
-        the world or use Bluetooth for local control up to 100 meters.
+        the world or use WiFi for seamless control.
       </p>
       <div className="flex flex-wrap justify-center gap-6 mb-12">
-        <div className="flex items-center space-x-3 text-green-300 bg-black/30 px-6 py-3 rounded-full">
+        <div className="flex items-center space-x-3 text-slate-300 bg-black/30 px-6 py-3 rounded-full">
           <Mic className="w-6 h-6" />
           <span className="text-lg">Custom Voice Commands</span>
         </div>
-        <div className="flex items-center space-x-3 text-emerald-300 bg-black/30 px-6 py-3 rounded-full">
+        <div className="flex items-center space-x-3 text-gray-300 bg-black/30 px-6 py-3 rounded-full">
           <Users className="w-6 h-6" />
           <span className="text-lg">Family Sharing</span>
         </div>
-        <div className="flex items-center space-x-3 text-lime-300 bg-black/30 px-6 py-3 rounded-full">
-          <Bluetooth className="w-6 h-6" />
-          <span className="text-lg">Bluetooth + WiFi</span>
+        <div className="flex items-center space-x-3 text-slate-300 bg-black/30 px-6 py-3 rounded-full">
+          <Wifi className="w-6 h-6" />
+          <span className="text-lg">WiFi Control</span>
         </div>
       </div>
       <div className="flex justify-center mb-6">
         <Button
           onClick={handleDownloadAPK}
           size="lg"
-          className="w-full sm:w-auto min-h-[80px] flex flex-col sm:flex-row items-center justify-center bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white px-6 sm:px-12 py-4 sm:py-6 text-lg sm:text-xl font-bold shadow-2xl hover:shadow-green-500/50 transition-all transform hover:scale-105 active:scale-95"
+          className="w-full sm:w-auto min-h-[80px] flex flex-col sm:flex-row items-center justify-center bg-gradient-to-r from-slate-500 to-gray-600 hover:from-slate-600 hover:to-gray-700 text-white px-6 sm:px-12 py-4 sm:py-6 text-lg sm:text-xl font-bold shadow-2xl hover:shadow-slate-500/50 transition-all transform hover:scale-105 active:scale-95"
         >
           <Download className="w-6 h-6 sm:w-8 sm:h-8 mb-2 sm:mb-0 sm:mr-4" />
           <span>Download APK Now - FREE</span>
@@ -679,10 +679,10 @@ ${product.features.map((f) => `- ${f}`).join("\n")}
   </section>
 
   {/* Footer */}
-  <footer className="bg-black/60 py-16 px-4 border-t border-green-500/20">
+  <footer className="bg-black/60 py-16 px-4 border-t border-slate-500/20">
     <div className="container mx-auto text-center">
       <div className="flex items-center justify-center space-x-3 mb-6">
-        <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-emerald-500 rounded-xl flex items-center justify-center shadow-lg">
+        <div className="w-12 h-12 bg-gradient-to-r from-slate-400 to-gray-500 rounded-xl flex items-center justify-center shadow-lg">
   <img
     src="/lovable-uploads/66f5d438-3ca2-41c8-9933-5ceff1c56961.png"
     alt="AL-BURAQ Logo"
@@ -697,25 +697,25 @@ ${product.features.map((f) => `- ${f}`).join("\n")}
       </div>
       <p className="text-gray-400 mb-6 text-lg">
         🔌 Plug & Play Installation • 🎙️ Custom Voice Control • 👥 Family
-        Sharing • 📡 WiFi & Bluetooth • ⚡ Up to 25A Support
+        Sharing • 📡 WiFi Control • ⚡ Up to 25A Support
       </p>
       <div className="flex justify-center space-x-6 mb-6">
         <a
           href="mailto:info.alburaqsmarthome@gmail.com"
-          className="text-green-400 hover:text-green-300 transition-colors"
+          className="text-slate-400 hover:text-slate-300 transition-colors"
         >
           <Mail className="w-6 h-6" />
         </a>
         <a
           href="https://wa.me/923054248536"
           target="_blank"
-          className="text-lime-400 hover:text-lime-300 transition-colors"
+          className="text-slate-400 hover:text-slate-300 transition-colors"
         >
           <MessageCircle className="w-6 h-6" />
         </a>
         <a
           href="tel:+923054248536"
-          className="text-emerald-400 hover:text-emerald-300 transition-colors"
+          className="text-slate-400 hover:text-slate-300 transition-colors"
         >
           <Phone className="w-6 h-6" />
         </a>
