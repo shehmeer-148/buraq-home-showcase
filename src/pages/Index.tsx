@@ -251,9 +251,9 @@ ${product.features.map((f) => `- ${f}`).join("\n")}
 
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-slate-950">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
       {/* Header */}
-      <header className="bg-slate-900/70 backdrop-blur-sm border-b border-slate-700/50 sticky top-0 z-50">
+      <header className="bg-white/80 backdrop-blur-sm border-b border-blue-200/50 sticky top-0 z-50 shadow-sm">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between flex-wrap gap-4">
             {/* Logo + Text */}
@@ -266,8 +266,8 @@ ${product.features.map((f) => `- ${f}`).join("\n")}
                 />
               </div>
               <div className="leading-tight">
-                <span className="text-lg sm:text-2xl font-bold text-white">AL-BURAQ</span>
-                <p className="text-xs sm:text-sm text-blue-300">Smart Home Automation</p>
+                <span className="text-lg sm:text-2xl font-bold text-gray-800">AL-BURAQ</span>
+                <p className="text-xs sm:text-sm text-blue-600">Smart Home Automation</p>
               </div>
             </div>
 
@@ -276,7 +276,7 @@ ${product.features.map((f) => `- ${f}`).join("\n")}
               <Button
                 onClick={() => handleContact('whatsapp')}
                 variant="outline"
-                className="border-blue-500/50 text-blue-300 hover:bg-blue-500/20 px-2 sm:px-4"
+                className="border-blue-500/50 text-blue-600 hover:bg-blue-50 px-2 sm:px-4"
               >
                 <MessageCircle className="w-4 h-4" />
                 <span className="hidden sm:inline ml-2">WhatsApp</span>
@@ -297,48 +297,48 @@ ${product.features.map((f) => `- ${f}`).join("\n")}
       <section className="py-24 px-4 relative overflow-hidden">
     <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-indigo-600/10 blur-3xl"></div>
     <div className="container mx-auto text-center relative z-10">
-      <h1 className="text-6xl md:text-8xl font-bold text-white mb-8 leading-tight">
+      <h1 className="text-6xl md:text-8xl font-bold text-gray-800 mb-8 leading-tight">
         AL-BURAQ
-        <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 animate-pulse">
+        <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 animate-pulse">
           Smart Home Automation
         </span>
       </h1>
       
       {/* Convert Switchboards Tagline */}
       <div className="mb-6">
-        <div className="inline-flex items-center bg-gradient-to-r from-blue-600/20 to-indigo-600/20 backdrop-blur-sm border border-blue-500/40 rounded-full px-8 py-4">
-          <Zap className="w-6 h-6 text-blue-400 mr-3" />
-          <span className="text-xl font-semibold text-white">⚡ Convert Your Existing Switch Boards to WiFi Boards</span>
+        <div className="inline-flex items-center bg-gradient-to-r from-blue-100 to-indigo-100 backdrop-blur-sm border border-blue-300/40 rounded-full px-8 py-4 shadow-sm">
+          <Zap className="w-6 h-6 text-blue-600 mr-3" />
+          <span className="text-xl font-semibold text-gray-800">⚡ Convert Your Existing Switch Boards to WiFi Boards</span>
         </div>
       </div>
      <p
-  className="text-xl md:text-2xl text-gray-200 mb-10 max-w-3xl mx-auto leading-relaxed text-center animate-fade-in-up"
+  className="text-xl md:text-2xl text-gray-700 mb-10 max-w-3xl mx-auto leading-relaxed text-center animate-fade-in-up"
 >
-  ✨ Experience the future of living with our <span className="text-blue-400 font-semibold">Plug & Play</span> Smart System —
+  ✨ Experience the future of living with our <span className="text-blue-600 font-semibold">Plug & Play</span> Smart System —
   <br className="hidden md:block" />
   No rewiring, No hassle.
   <br /><br />
-  🗣️ Control appliances using <span className="text-indigo-300 font-semibold">Custom Voice Commands</span>,
+  🗣️ Control appliances using <span className="text-indigo-600 font-semibold">Custom Voice Commands</span>,
    <br className="hidden md:block" />
-  Share access with your family, and enjoy <span className="text-purple-300 font-semibold">Real-Time Control</span> from anywhere in the world.
+  Share access with your family, and enjoy <span className="text-purple-600 font-semibold">Real-Time Control</span> from anywhere in the world.
 </p>
 
       <div className="flex flex-wrap justify-center gap-4 mb-12">
-        <div className="bg-gradient-to-r from-blue-500/20 to-indigo-500/20 backdrop-blur-sm border border-blue-500/40 rounded-full px-6 py-3 flex items-center space-x-3">
-          <Wrench className="w-5 h-5 text-blue-300" />
-          <span className="text-blue-200 font-medium">🔌 Plug & Play - No Rewiring</span>
+        <div className="bg-gradient-to-r from-blue-100 to-indigo-100 backdrop-blur-sm border border-blue-300/40 rounded-full px-6 py-3 flex items-center space-x-3 shadow-sm">
+          <Wrench className="w-5 h-5 text-blue-600" />
+          <span className="text-blue-800 font-medium">🔌 Plug & Play - No Rewiring</span>
         </div>
-        <div className="bg-gradient-to-r from-purple-500/20 to-violet-500/20 backdrop-blur-sm border border-purple-500/40 rounded-full px-6 py-3 flex items-center space-x-3">
-          <Mic className="w-5 h-5 text-purple-300" />
-          <span className="text-purple-200 font-medium">🎙️ Custom Voice Commands</span>
+        <div className="bg-gradient-to-r from-purple-100 to-violet-100 backdrop-blur-sm border border-purple-300/40 rounded-full px-6 py-3 flex items-center space-x-3 shadow-sm">
+          <Mic className="w-5 h-5 text-purple-600" />
+          <span className="text-purple-800 font-medium">🎙️ Custom Voice Commands</span>
         </div>
-        <div className="bg-gradient-to-r from-indigo-500/20 to-purple-500/20 backdrop-blur-sm border border-indigo-500/40 rounded-full px-6 py-3 flex items-center space-x-3">
-          <Users className="w-5 h-5 text-indigo-300" />
-          <span className="text-indigo-200 font-medium">👥 Family Sharing</span>
+        <div className="bg-gradient-to-r from-indigo-100 to-purple-100 backdrop-blur-sm border border-indigo-300/40 rounded-full px-6 py-3 flex items-center space-x-3 shadow-sm">
+          <Users className="w-5 h-5 text-indigo-600" />
+          <span className="text-indigo-800 font-medium">👥 Family Sharing</span>
         </div>
-        <div className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-sm border border-cyan-500/40 rounded-full px-6 py-3 flex items-center space-x-3">
-          <Wifi className="w-5 h-5 text-cyan-300" />
-          <span className="text-cyan-200 font-medium">📡 WiFi Control</span>
+        <div className="bg-gradient-to-r from-cyan-100 to-blue-100 backdrop-blur-sm border border-cyan-300/40 rounded-full px-6 py-3 flex items-center space-x-3 shadow-sm">
+          <Wifi className="w-5 h-5 text-cyan-600" />
+          <span className="text-cyan-800 font-medium">📡 WiFi Control</span>
         </div>
       </div>
     </div>
