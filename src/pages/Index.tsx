@@ -228,15 +228,12 @@ window.open("https://mail.google.com/mail/?view=cm&to=info.alburaqsmarthome@gmai
 
   const handleOrder = (product: {
   name: string;
-  price: string;
-  discount: string;
   features: string[];
 }) => {
   const message = `
 *Product Inquiry*
 
 📦 *Product:* ${product.name}
-💸 *Price:* ${product.price} (${product.discount})
 
 ✨ *Features:*
 ${product.features.map((f) => `- ${f}`).join("\n")}
@@ -254,9 +251,9 @@ ${product.features.map((f) => `- ${f}`).join("\n")}
 
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-950 via-slate-950 to-black">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-slate-950">
       {/* Header */}
-      <header className="bg-black/50 backdrop-blur-sm border-b border-gray-800/50 sticky top-0 z-50">
+      <header className="bg-slate-900/70 backdrop-blur-sm border-b border-slate-700/50 sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between flex-wrap gap-4">
             {/* Logo + Text */}
@@ -306,6 +303,14 @@ ${product.features.map((f) => `- ${f}`).join("\n")}
           Smart Home Automation
         </span>
       </h1>
+      
+      {/* Convert Switchboards Tagline */}
+      <div className="mb-6">
+        <div className="inline-flex items-center bg-gradient-to-r from-blue-600/20 to-indigo-600/20 backdrop-blur-sm border border-blue-500/40 rounded-full px-8 py-4">
+          <Zap className="w-6 h-6 text-blue-400 mr-3" />
+          <span className="text-xl font-semibold text-white">⚡ Convert Your Existing Switch Boards to WiFi Boards</span>
+        </div>
+      </div>
      <p
   className="text-xl md:text-2xl text-gray-200 mb-10 max-w-3xl mx-auto leading-relaxed text-center animate-fade-in-up"
 >
@@ -340,38 +345,38 @@ ${product.features.map((f) => `- ${f}`).join("\n")}
   </section>
 
       {/* Plug & Play Feature Highlight */}
-  <section className="py-16 px-4 bg-gradient-to-r from-slate-900/30 to-gray-900/30 border-y border-gray-800/20">
+  <section className="py-16 px-4 bg-gradient-to-r from-slate-800/40 to-gray-800/40 border-y border-slate-700/30">
     <div className="container mx-auto text-center">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-4xl font-bold text-white mb-6">🔌 Revolutionary Plug & Play Technology</h2>
         <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-black/60 p-6 rounded-xl border border-blue-500/30">
-            <Wrench className="w-16 h-16 text-blue-400 mx-auto mb-4" />
-            <h3 className="text-xl font-bold text-white mb-2">No Rewiring Needed</h3>
-            <p className="text-gray-300">Simply place inside your existing switchboard - no destruction or rewiring required</p>
-          </div>
-          <div className="bg-black/60 p-6 rounded-xl border border-indigo-500/30">
-            <Lightbulb className="w-16 h-16 text-indigo-400 mx-auto mb-4" />
-            <h3 className="text-xl font-bold text-white mb-2">Old Switches Still Work</h3>
-            <p className="text-gray-300">Your physical switches remain functional - control appliances both physically and virtually</p>
-          </div>
-          <div className="bg-black/60 p-6 rounded-xl border border-purple-500/30">
-            <Zap className="w-16 h-16 text-purple-400 mx-auto mb-4" />
-            <h3 className="text-xl font-bold text-white mb-2">Instant Smart Home</h3>
-            <p className="text-gray-300">Transform your entire home into a smart home in minutes, not hours</p>
-          </div>
+           <div className="bg-slate-800/60 p-6 rounded-xl border border-blue-500/40">
+             <Wrench className="w-16 h-16 text-blue-400 mx-auto mb-4" />
+             <h3 className="text-xl font-bold text-white mb-2">No Rewiring Needed</h3>
+             <p className="text-gray-200">Simply place inside your existing switchboard - no destruction or rewiring required</p>
+           </div>
+           <div className="bg-slate-800/60 p-6 rounded-xl border border-indigo-500/40">
+             <Lightbulb className="w-16 h-16 text-indigo-400 mx-auto mb-4" />
+             <h3 className="text-xl font-bold text-white mb-2">Old Switches Still Work</h3>
+             <p className="text-gray-200">Your physical switches remain functional - control appliances both physically and virtually</p>
+           </div>
+           <div className="bg-slate-800/60 p-6 rounded-xl border border-purple-500/40">
+             <Zap className="w-16 h-16 text-purple-400 mx-auto mb-4" />
+             <h3 className="text-xl font-bold text-white mb-2">Instant Smart Home</h3>
+             <p className="text-gray-200">Transform your entire home into a smart home in minutes, not hours</p>
+           </div>
         </div>
       </div>
     </div>
   </section>
 
       {/* Advanced Features Section */}
-     <section className="py-20 px-4 bg-black/30">
+     <section className="py-20 px-4 bg-slate-900/40">
     <div className="container mx-auto">
       <h2 className="text-5xl font-bold text-white text-center mb-16">🚀 Revolutionary Features</h2>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {features.map((feature, index) => (
-          <Card key={index} className="bg-black/70 border-gray-700/50 hover:border-blue-500/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20">
+          <Card key={index} className="bg-slate-800/70 border-slate-600/50 hover:border-blue-500/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20">
             <CardHeader>
               <div className={`w-20 h-20 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6 shadow-lg`}>
                 <feature.icon className="w-10 h-10 text-white" />
@@ -399,7 +404,7 @@ ${product.features.map((f) => `- ${f}`).join("\n")}
         {products.map((product, index) => (
           <Card
             key={product.id}
-            className="bg-black/70 border-gray-700/50 hover:border-blue-500/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20"
+            className="bg-slate-800/70 border-slate-600/50 hover:border-blue-500/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20"
           >
             <CardHeader>
               <div className="relative">
@@ -412,17 +417,9 @@ ${product.features.map((f) => `- ${f}`).join("\n")}
                   {product.discount}
                 </Badge>
               </div>
-              <CardTitle className="text-white text-xl mb-2">
+              <CardTitle className="text-white text-xl mb-4">
                 {product.name}
               </CardTitle>
-              <div className="flex items-center space-x-3 mb-3">
-                <span className="text-3xl font-bold text-blue-400">
-                  {product.price}
-                </span>
-                <span className="text-lg text-gray-500 line-through">
-                  {product.originalPrice}
-                </span>
-              </div>
             </CardHeader>
             <CardContent>
               <CardDescription className="text-gray-300 mb-6 text-base leading-relaxed">
