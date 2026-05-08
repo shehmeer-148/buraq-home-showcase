@@ -9,6 +9,7 @@ import appHero from "@/assets/app-hero.png";
 import appAbout from "@/assets/app-about.png";
 import appFeatures from "@/assets/app-features.png";
 import appAdvantages from "@/assets/app-advantages.png";
+import PhoneFrame from "@/components/PhoneFrame";
 
 const Index = () => {
   const [activeProduct, setActiveProduct] = useState(0);
