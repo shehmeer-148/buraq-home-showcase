@@ -276,7 +276,7 @@ ${product.features.map((f) => `- ${f}`).join("\n")}
               <Button
                 onClick={() => handleContact('whatsapp')}
                 variant="outline"
-                className="border-blue-500/50 text-blue-600 hover:bg-blue-50 px-2 sm:px-4"
+                className="border-blue-500/50 text-blue-400 hover:bg-blue-500/20 px-2 sm:px-4"
               >
                 <MessageCircle className="w-4 h-4" />
                 <span className="hidden sm:inline ml-2">WhatsApp</span>
