@@ -266,8 +266,8 @@ ${product.features.map((f) => `- ${f}`).join("\n")}
                 />
               </div>
               <div className="leading-tight">
-                <span className="text-lg sm:text-2xl font-bold text-gray-800">AL-BURAQ</span>
-                <p className="text-xs sm:text-sm text-blue-600">Smart Home Automation</p>
+                <span className="text-lg sm:text-2xl font-bold text-white">AL-BURAQ</span>
+                <p className="text-xs sm:text-sm text-blue-400">Smart Home Automation</p>
               </div>
             </div>
 
