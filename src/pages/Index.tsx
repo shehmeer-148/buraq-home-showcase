@@ -375,9 +375,9 @@ ${product.features.map((f) => `- ${f}`).join("\n")}
   </section>
 
       {/* Mobile App Showcase Section */}
-  <section className="py-20 px-4 bg-gradient-to-b from-slate-950 via-purple-950/20 to-slate-950">
+  <section className="py-20 px-4 bg-gradient-to-b from-slate-950 via-purple-950/20 to-slate-950 overflow-hidden">
     <div className="container mx-auto">
-      <div className="text-center mb-14">
+      <div className="text-center mb-16">
         <Badge className="mb-4 bg-gradient-to-r from-purple-600/30 to-pink-600/30 border border-purple-500/50 text-purple-200 text-sm px-4 py-1">
           📱 AL-BURAQ Mobile App
         </Badge>
@@ -385,22 +385,110 @@ ${product.features.map((f) => `- ${f}`).join("\n")}
           Your Smart Home, <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">In Your Pocket</span>
         </h2>
         <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-          A full-fledged IoT-based mobile application built with Flutter that lets you control and monitor every appliance in your home via Wi-Fi and Bluetooth.
+          A full-fledged IoT-based application built with Flutter — control, monitor and automate every appliance via Wi-Fi or Bluetooth from anywhere in the world.
         </p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-6xl mx-auto">
-        <div className="rounded-2xl overflow-hidden border border-purple-500/30 bg-slate-900/40 hover:border-pink-500/60 transition-all duration-300 hover:scale-[1.02] shadow-2xl shadow-purple-900/30">
-          <img src={appHero} alt="AL-BURAQ Smart Home App overview" className="w-full h-auto" loading="lazy" />
+      {/* Phone frame component (inline) */}
+      {(() => null)()}
+
+      {/* Showcase 1: Hero + intro copy */}
+      <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto mb-24">
+        <div className="flex justify-center order-2 lg:order-1">
+          <PhoneFrame src={appHero} alt="AL-BURAQ Smart Home App home screen" />
         </div>
-        <div className="rounded-2xl overflow-hidden border border-purple-500/30 bg-slate-900/40 hover:border-pink-500/60 transition-all duration-300 hover:scale-[1.02] shadow-2xl shadow-purple-900/30">
-          <img src={appAbout} alt="About AL-BURAQ Smart Home application" className="w-full h-auto" loading="lazy" />
+        <div className="order-1 lg:order-2 space-y-5">
+          <h3 className="text-3xl font-bold text-white">A truly <span className="text-pink-400">Smart Home</span> experience</h3>
+          <p className="text-gray-300 leading-relaxed">
+            The AL-BURAQ app gives you a beautiful, unified dashboard to control every light, fan and appliance in your home. No technical setup, no complex wiring — just open the app and start controlling.
+          </p>
+          <ul className="space-y-3">
+            {[
+              { icon: "⚡", text: "Instant on/off control with zero lag" },
+              { icon: "🌍", text: "Works globally over Wi-Fi, locally over Bluetooth" },
+              { icon: "👨‍👩‍👧", text: "Multi-user family sharing built in" },
+            ].map((f, i) => (
+              <li key={i} className="flex items-start gap-3 text-gray-200">
+                <span className="text-xl">{f.icon}</span>
+                <span>{f.text}</span>
+              </li>
+            ))}
+          </ul>
         </div>
-        <div className="rounded-2xl overflow-hidden border border-purple-500/30 bg-slate-900/40 hover:border-pink-500/60 transition-all duration-300 hover:scale-[1.02] shadow-2xl shadow-purple-900/30 md:col-span-2">
-          <img src={appFeatures} alt="AL-BURAQ App features - profile, WiFi, voice control, policies" className="w-full h-auto" loading="lazy" />
+      </div>
+
+      {/* Showcase 2: About */}
+      <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto mb-24">
+        <div className="space-y-5">
+          <Badge className="bg-purple-600/20 border border-purple-500/40 text-purple-200">About the App</Badge>
+          <h3 className="text-3xl font-bold text-white">Built with <span className="text-purple-400">Flutter</span> for speed & reliability</h3>
+          <p className="text-gray-300 leading-relaxed">
+            Cross-platform performance on Android & iOS. The app pairs seamlessly with our 1–8 channel modules, dimmers and 25A switches — all without rewiring your home.
+          </p>
+          <div className="grid grid-cols-2 gap-4 pt-2">
+            <div className="bg-slate-900/60 border border-purple-500/20 rounded-xl p-4">
+              <div className="text-2xl font-bold text-pink-400">100m</div>
+              <div className="text-sm text-gray-400">Bluetooth range</div>
+            </div>
+            <div className="bg-slate-900/60 border border-purple-500/20 rounded-xl p-4">
+              <div className="text-2xl font-bold text-purple-400">Global</div>
+              <div className="text-sm text-gray-400">Wi-Fi access</div>
+            </div>
+          </div>
         </div>
-        <div className="rounded-2xl overflow-hidden border border-purple-500/30 bg-slate-900/40 hover:border-pink-500/60 transition-all duration-300 hover:scale-[1.02] shadow-2xl shadow-purple-900/30 md:col-span-2">
-          <img src={appAdvantages} alt="AL-BURAQ application advantages" className="w-full h-auto" loading="lazy" />
+        <div className="flex justify-center">
+          <PhoneFrame src={appAbout} alt="About AL-BURAQ Smart Home" />
+        </div>
+      </div>
+
+      {/* Showcase 3: Features */}
+      <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto mb-24">
+        <div className="flex justify-center order-2 lg:order-1">
+          <PhoneFrame src={appFeatures} alt="AL-BURAQ App features" />
+        </div>
+        <div className="order-1 lg:order-2 space-y-5">
+          <Badge className="bg-pink-600/20 border border-pink-500/40 text-pink-200">Powerful Features</Badge>
+          <h3 className="text-3xl font-bold text-white">Everything you need, <span className="text-pink-400">in one app</span></h3>
+          <div className="grid sm:grid-cols-2 gap-4">
+            {[
+              { icon: "🎙️", title: "Custom Voice", desc: "Personalized trigger commands" },
+              { icon: "📡", title: "Wi-Fi Mode", desc: "Control from anywhere" },
+              { icon: "📶", title: "Bluetooth Mode", desc: "Local 100m range" },
+              { icon: "👤", title: "User Profile", desc: "Secure & private" },
+              { icon: "⏱️", title: "Schedules", desc: "Automate your day" },
+              { icon: "🔒", title: "Privacy Policy", desc: "Your data, your control" },
+            ].map((f, i) => (
+              <div key={i} className="bg-slate-900/60 border border-purple-500/20 rounded-xl p-4 hover:border-pink-500/50 transition-colors">
+                <div className="text-2xl mb-1">{f.icon}</div>
+                <div className="text-white font-semibold text-sm">{f.title}</div>
+                <div className="text-gray-400 text-xs">{f.desc}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Showcase 4: Advantages */}
+      <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+        <div className="space-y-5">
+          <Badge className="bg-purple-600/20 border border-purple-500/40 text-purple-200">Why AL-BURAQ</Badge>
+          <h3 className="text-3xl font-bold text-white">Advantages that <span className="text-purple-400">make a difference</span></h3>
+          <ul className="space-y-3">
+            {[
+              "🔌 Plug & Play — installs in minutes, no rewiring",
+              "💰 Affordable smart home upgrade in PKR",
+              "🛡️ Safe, reliable hardware tested for Pakistani voltage",
+              "🤝 Family sharing — every member gets access",
+              "🆓 Free lifetime app updates & support",
+            ].map((t, i) => (
+              <li key={i} className="flex items-start gap-3 text-gray-200 bg-slate-900/40 border border-purple-500/15 rounded-lg px-4 py-3">
+                <span>{t}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="flex justify-center">
+          <PhoneFrame src={appAdvantages} alt="AL-BURAQ App advantages" />
         </div>
       </div>
     </div>
