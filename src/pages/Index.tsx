@@ -251,9 +251,9 @@ ${product.features.map((f) => `- ${f}`).join("\n")}
 
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       {/* Header */}
-      <header className="bg-white/80 backdrop-blur-sm border-b border-blue-200/50 sticky top-0 z-50 shadow-sm">
+      <header className="bg-slate-950/80 backdrop-blur-sm border-b border-slate-800 sticky top-0 z-50 shadow-sm">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between flex-wrap gap-4">
             {/* Logo + Text */}
