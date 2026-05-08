@@ -5,6 +5,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Wifi, Smartphone, Shield, Zap, Globe, Download, Play, Plug, Users, User, Mic, Volume2, Bluetooth, Sliders, Clock, Mail, Phone, MessageCircle, Wrench, Lightbulb, Fan, RefreshCw } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
+import appHero from "@/assets/app-hero.png";
+import appAbout from "@/assets/app-about.png";
+import appFeatures from "@/assets/app-features.png";
+import appAdvantages from "@/assets/app-advantages.png";
 
 const Index = () => {
   const [activeProduct, setActiveProduct] = useState(0);
@@ -365,6 +369,38 @@ ${product.features.map((f) => `- ${f}`).join("\n")}
              <h3 className="text-xl font-bold text-white mb-2">Instant Smart Home</h3>
              <p className="text-gray-200">Transform your entire home into a smart home in minutes, not hours</p>
            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+      {/* Mobile App Showcase Section */}
+  <section className="py-20 px-4 bg-gradient-to-b from-slate-950 via-purple-950/20 to-slate-950">
+    <div className="container mx-auto">
+      <div className="text-center mb-14">
+        <Badge className="mb-4 bg-gradient-to-r from-purple-600/30 to-pink-600/30 border border-purple-500/50 text-purple-200 text-sm px-4 py-1">
+          📱 AL-BURAQ Mobile App
+        </Badge>
+        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          Your Smart Home, <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">In Your Pocket</span>
+        </h2>
+        <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+          A full-fledged IoT-based mobile application built with Flutter that lets you control and monitor every appliance in your home via Wi-Fi and Bluetooth.
+        </p>
+      </div>
+
+      <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-6xl mx-auto">
+        <div className="rounded-2xl overflow-hidden border border-purple-500/30 bg-slate-900/40 hover:border-pink-500/60 transition-all duration-300 hover:scale-[1.02] shadow-2xl shadow-purple-900/30">
+          <img src={appHero} alt="AL-BURAQ Smart Home App overview" className="w-full h-auto" loading="lazy" />
+        </div>
+        <div className="rounded-2xl overflow-hidden border border-purple-500/30 bg-slate-900/40 hover:border-pink-500/60 transition-all duration-300 hover:scale-[1.02] shadow-2xl shadow-purple-900/30">
+          <img src={appAbout} alt="About AL-BURAQ Smart Home application" className="w-full h-auto" loading="lazy" />
+        </div>
+        <div className="rounded-2xl overflow-hidden border border-purple-500/30 bg-slate-900/40 hover:border-pink-500/60 transition-all duration-300 hover:scale-[1.02] shadow-2xl shadow-purple-900/30 md:col-span-2">
+          <img src={appFeatures} alt="AL-BURAQ App features - profile, WiFi, voice control, policies" className="w-full h-auto" loading="lazy" />
+        </div>
+        <div className="rounded-2xl overflow-hidden border border-purple-500/30 bg-slate-900/40 hover:border-pink-500/60 transition-all duration-300 hover:scale-[1.02] shadow-2xl shadow-purple-900/30 md:col-span-2">
+          <img src={appAdvantages} alt="AL-BURAQ application advantages" className="w-full h-auto" loading="lazy" />
         </div>
       </div>
     </div>
