@@ -2,6 +2,8 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import productSingle from "@/assets/product-single.png";
+import productDouble from "@/assets/product-double.png";
 
 const Products = () => {
   const products = [
@@ -21,7 +23,7 @@ const Products = () => {
       price: "PKR 9,750",
       originalPrice: "PKR 11,938",
       discount: "19% OFF",
-      image: "/lovable-uploads/44a60ac1-89cb-48dc-8c14-4e88040434fa.png",
+      image: productDouble,
       description: "Ideal for medium-sized rooms, control 4 appliances with ease. Great balance of functionality and affordability with advanced voice control.",
       features: ["4 Channel Control", "Bluetooth Control", "Voice Commands", "Family Sharing", "Real-time Updates", "10A Current Support"]
     },
@@ -31,7 +33,7 @@ const Products = () => {
       price: "PKR 5,000",
       originalPrice: "PKR 6,250",
       discount: "20% OFF",
-      image: "/lovable-uploads/0c770567-89d8-4a04-9d0c-cc654fd2663a.png",
+      image: productSingle,
       description: "Perfect starter device for single appliance control. Experience smart home automation at an affordable price with voice control.",
       features: ["Single Channel", "WiFi Enabled", "Voice Commands", "Family Sharing", "Real-time Updates", "10A Current Support"]
     },
