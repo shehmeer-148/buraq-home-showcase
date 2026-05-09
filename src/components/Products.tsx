@@ -2,6 +2,8 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import productSingle from "@/assets/product-single.png";
+import productDouble from "@/assets/product-double.png";
 
 const Products = () => {
   const products = [
