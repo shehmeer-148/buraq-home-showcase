@@ -81,7 +81,7 @@ const Products = () => {
                   <img 
                     src={product.image} 
                     alt={product.name}
-                    className="w-full h-48 md:h-56 object-cover rounded-xl mb-4 shadow-lg group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-48 md:h-56 object-contain bg-black/40 p-4 rounded-xl mb-4 shadow-lg group-hover:scale-110 transition-transform duration-500"
                   />
                   <Badge className="absolute top-3 right-3 bg-red-600 text-white px-2 md:px-3 py-1 text-xs md:text-sm font-bold animate-pulse">
                     {product.discount}
